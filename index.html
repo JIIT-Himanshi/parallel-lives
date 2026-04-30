@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallel Lives - Choose Your Reality</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Space+Grotesk:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+
+      <div id="hud" class="hud">
+        <div class="logo">Parallel Lives</div>
+        <div class="hint" id="globalHint"></div>
+        <button id="compareBtn" class="compare-btn" aria-label="Compare lives">
+          Compare Lives
+        </button>
+      </div>
+
+      <div id="entry" class="layer layer-entry active">
+        <div class="entry-text">
+          <p class="kicker">What if your life had different versions?</p>
+          <h1>Choose your reality</h1>
+          <p class="sub">Move your mouse. Click to open the portal.</p>
+        </div>
+        <div class="entry-pulse"></div>
+      </div>
+
+      <div id="hub" class="layer layer-hub">
+        <div class="hub-title">
+          <h2>Multiverse Hub</h2>
+          <p>Hover a portal. Click to enter.</p>
+        </div>
+        <div class="portal-label" id="portalLabel"></div>
+      </div>
+
+      <div id="life" class="layer layer-life">
+        <div class="life-header">
+          <div class="life-title" id="lifeTitle">Artist</div>
+          <div class="life-sub" id="lifeSub">Freedom + chaos</div>
+        </div>
+        <div id="lifeScene" class="life-scene"></div>
+        <div class="life-stats">
+          <div class="stat"><span>Happiness</span><div class="bar"><div id="statH" class="fill"></div></div></div>
+          <div class="stat"><span>Money</span><div class="bar"><div id="statM" class="fill"></div></div></div>
+          <div class="stat"><span>Freedom</span><div class="bar"><div id="statF" class="fill"></div></div></div>
+          <div class="stat"><span>Stress</span><div class="bar"><div id="statS" class="fill"></div></div></div>
+        </div>
+        <button id="backToHub" class="back-btn" aria-label="Back to hub">Back to hub</button>
+      </div>
+
+      <div id="compare" class="layer layer-compare">
+        <div class="compare-header">
+          <h2>Parallel Comparison</h2>
+          <p>Watch timelines evolve in real time.</p>
+        </div>
+        <div id="compareGrid" class="compare-grid"></div>
+        <button id="exitCompare" class="back-btn" aria-label="Exit compare">Return</button>
+      </div>
+
+      <div class="sound-toggle" id="soundToggle" aria-label="Toggle sound">Sound: On</div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
